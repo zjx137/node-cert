@@ -1,0 +1,12 @@
+{
+  "name": "node-cert",
+  "version": "1.0.0",
+  "description": "Generate self-signed certs with Promise.",
+  "main": "index.js",
+  "repository": "https://github.com/zjx137/node-cert.git",
+  "author": "bacbinzhong@outlook.com",
+  "license": "MIT",
+  "dependencies": {
+    "node-forge": "^0.10.0"
+  }
+}
