@@ -8,9 +8,16 @@ class Cert extends certCore {
 }
 
 // test
-let option = {}
-let a = new Cert(option)
 
-console.log(a.generateRootCert())
+async function test() {
+    let option = {}
+    let a = new Cert(option)
+    let res = await a.generateRootCert()
+    console.log(res)
+    
+}
+
+test()
+// console.log(a.generateRootCert())
 
 // module.exports = Cert
