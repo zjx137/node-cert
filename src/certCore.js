@@ -4,7 +4,7 @@ const path = require('path')
 
 class certCore {
     constructor(option) {
-        this.keyPair= option.keyPair || 2048
+        this.keyPair = option.keyPair || 2048
         this.defaultAttrs = [
             { name: 'countryName', value: 'CN' },
             { name: 'organizationName', value: 'node-cert' },
@@ -42,7 +42,6 @@ class certCore {
         return new Promise((resolve, reject) => {
             // Use Root Crt sign Host Crt
             if (this.isHostCAFilesExist(hostCACertPath, hostCAKeyPath)) {
-                console.log('existed1')
                 const cert = fs.readFileSync(hostCACertPath).toString()
                 const privateKey = fs.readFileSync(hostCAKeyPath).toString()
                 const publicKey = forge.pki.publicKeyToPem(forge.pki.certificateFromPem(cert).publicKey)
@@ -91,7 +90,6 @@ class certCore {
     generateRootCert (commonName = 'certCore') {
         return new Promise((resolve, reject) => {
             if(this.isRootCAFilesExist()) {
-                console.log('existed')
                 const cert = fs.readFileSync(this.rootCACertPath).toString()
                 const privateKey = fs.readFileSync(this.rootCAKeyPath).toString()
                 const publicKey = forge.pki.publicKeyToPem(forge.pki.certificateFromPem(cert).publicKey)
