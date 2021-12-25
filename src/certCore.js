@@ -11,7 +11,7 @@ class certCore {
             { shortName: 'ST', value: 'ZJ' },
             { shortName: 'OU', value: 'node-cert' }
         ]
-        this.rootCAPath = option.rootCAKeyPath || path.join(__dirname, '../cert')
+        this.rootCAPath = option.rootPath || path.join(__dirname, '../cert')
         if(!fs.existsSync(this.rootCAPath)) {
             fs.mkdirSync(this.rootCAPath)
         }
