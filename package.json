@@ -1,5 +1,5 @@
 {
-  "name": "node-cert",
+  "name": "node-cert-generator",
   "version": "1.0.0",
   "description": "Generate self-signed certs with Promise.",
   "main": "src/index.js",
