@@ -2,7 +2,7 @@
   "name": "node-cert",
   "version": "1.0.0",
   "description": "Generate self-signed certs with Promise.",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/zjx137/node-cert.git",
   "author": "bacbinzhong@outlook.com",
   "license": "MIT",
