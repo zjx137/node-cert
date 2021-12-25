@@ -1,27 +1,28 @@
-# node-cert
+# node-cert-generator
 Generate self-signed certs with Promise.
 
 ## Options
 
 ```javascript
+const CertGenerator = require('node-cert-generator')
 const options = {
     keyPair: 2048,
-    rootPath: ''
+    rootPath: '' // default to ./node_modules/node-cert-generator/cert
 }
-const cert = new Cert(options)
+const certGenerator  = new CertGenerator (options)
 ```
 
 ## Usage
 
 ```javascript
 
-const cert = new Cert(options)
+const certGenerator  = new CertGenerator (options)
 
-cert.getRootCA().then(rootCA => {
+certGenerator.getRootCA().then(rootCA => {
     // do something...
 })
 
-cert.getHostCAKey(host).then(hostKey => {
+certGenerator.getHostCAKey(host).then(hostKey => {
     // do something...
 })
 ```

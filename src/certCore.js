@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 class certCore {
-    constructor(option) {
+    constructor(option = {}) {
         this.keyPair = option.keyPair || 2048
         this.defaultAttrs = [
             { name: 'countryName', value: 'CN' },
